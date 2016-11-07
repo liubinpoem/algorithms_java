@@ -3,12 +3,16 @@
  */
 public class QuickSort {
 
-    public QuickSort(int[] array){
+    //包裹函数
+    public void quickSort(int[] array){
         if(array!=null&&array.length!=0) {
             Sort(array, 0, array.length-1);
             for(int i=0;i<array.length;i++){
                 System.out.print(array[i]+"\t");
             }
+            System.out.println();
+        }else{
+            System.out.println("Not a valid array!");
         }
     }
 
@@ -33,7 +37,7 @@ public class QuickSort {
         return start;
     }
 
-    //排序
+    //排序,排序方式为递归地形式，先划分，再分别排序标准元素左右的数组
     public void Sort(int[] array,int start,int end){
         if(start<end){
             int mid=Partition(array,start,end);
@@ -44,7 +48,14 @@ public class QuickSort {
 
     //测试用例
     public static void main(String args[]){
-        int[] a={9,10,20,30,15,8,1,7,8,10};
-        QuickSort qs=new QuickSort(a);
+        int[] a1=null;
+        int[] a2={};
+        int[] a3={1};
+        int[] a4={9,10,20,30,15,8,1,7,8,10};
+        QuickSort qs=new QuickSort();
+        qs.quickSort(a1);
+        qs.quickSort(a2);
+        qs.quickSort(a3);
+        qs.quickSort(a4);
     }
 }
