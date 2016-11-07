@@ -41,12 +41,12 @@ public class MergeSort {
         }
     }
 
-    //包裹函数
     public void mergeSort(int[] a){
         if(a==null||a.length==0) {
             System.out.println("Not a valid array!");
             return;
         }
+
         Sort(a,0,a.length-1);
         for(int i=0;i<a.length;i++){
             System.out.print(a[i]+"\t");
