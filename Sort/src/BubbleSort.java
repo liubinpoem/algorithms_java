@@ -3,6 +3,7 @@
  */
 public class BubbleSort {
 
+    //冒泡排序的思想，是每次把某个位置应放置的元素从该位置后面的数组中找出来，放置在该位置
     public void Sort(int[] array){
         for(int i=0;i<array.length-1;i++) {
             for (int j = i; j < array.length; j++) {
