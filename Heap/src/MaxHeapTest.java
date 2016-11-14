@@ -5,7 +5,7 @@ import java.util.Random;
  */
 
 //this class is
-public class HeapTest {
+public class MaxHeapTest {
 
     public static void main(String args[]){
         Random rd=new Random();
